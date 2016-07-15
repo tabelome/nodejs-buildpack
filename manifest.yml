@@ -49,6 +49,12 @@ dependencies:
     cf_stacks:
       - cflinuxfs2
   - name: node
+    version: 4.0.0
+    uri: http://s3pository.heroku.com/node/v4.0.0/node-v4.0.0-linux-x64.tar.gz
+    md5: ad9aa8802fe1ef5b9c96913fd2d08816
+    cf_stacks:
+      - cflinuxfs2
+  - name: node
     version: 5.8.0
     uri: https://pivotal-buildpacks.s3.amazonaws.com/concourse-binaries/node/node-5.8.0-linux-x64.tgz
     md5: d0c010517efff468651f0df80bc62adc
