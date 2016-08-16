@@ -31,7 +31,8 @@ class Appdynamics_ext:
             controllerPort: JSON.parse(process.env.VCAP_SERVICES)["%s"][0].credentials["port"],
             accountName: JSON.parse(process.env.VCAP_SERVICES)["%s"][0].credentials["account-name"],
             accountAccessKey: JSON.parse(process.env.VCAP_SERVICES)["%s"][0].credentials["account-access-key"],
-            applicationName: JSON.parse(process.env.VCAP_APPLICATION).application_name, tierName: JSON.parse(process.env.VCAP_APPLICATION).application_name,
+            applicationName: JSON.parse(process.env.VCAP_SERVICES)["%s"][0].credentials["application-name"],
+            tierName: JSON.parse(process.env.VCAP_SERVICES)["%s"][0].credentials["tier-name"],
             nodeName: '%s','noNodeNameSuffix': 'true'});""" % (self.extension_name, self.extension_name, self.extension_name, 
             self.extension_name, self.nodeName)
         vcap_application_filename = os.path.join("/tmp", '_appd_module.txt')
